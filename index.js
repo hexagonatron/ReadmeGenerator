@@ -136,7 +136,7 @@ ${ans.usage}
         tableOfContents += `* [License](#License)\n`
         contentMarkdwn += `## License
             
-This project uses the ${ans.license} license.
+This project is licenced under the ${ans.license} license.
             
 `
 
