@@ -192,6 +192,13 @@ ${json.email ? `Email: ${json.email}` : ""}
     .then(finalMarkdwn => {
         //Write final markdown to file
 
+        //If output dir doesn't exist then create it
+        const dir = './output';
+
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir);
+        }
+
         fs.writeFile("./output/README.md", finalMarkdwn, (err) => {
             if (err) console.log(err);
             else console.log(`\n \nThanks for using the readme generator.\n\nYour readme has been saved in ${chalk.green(__dirname + "\\output\\README.md")}`);

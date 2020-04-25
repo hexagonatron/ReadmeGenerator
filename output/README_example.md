@@ -39,8 +39,7 @@ run the command npm test
 
 ## Author
 
+![avatar](https://avatars2.githubusercontent.com/u/46476247?s=60&v=4)
 [hexagonatron](https://github.com/hexagonatron)
-
-![avatar](https://avatars3.githubusercontent.com/u/46476247?v=4)
 
 
