@@ -132,7 +132,7 @@ ${ans.usage}
         }
 
 
-        //Licens
+        //License
         tableOfContents += `* [License](#License)\n`
         contentMarkdwn += `## License
             
@@ -155,7 +155,7 @@ ${ans.contribute}
             tableOfContents += `* [Tests](#Tests)\n`
             contentMarkdwn += `## Tests
 
-${ans.contribute}
+${ans.tests}
 
 `
         }
@@ -174,7 +174,7 @@ ${ans.contribute}
                 return res.json()
             })
             .then(json => {
-                
+
                 tableOfContents += `* [Author](#Author)\n`;
                 contentMarkdwn += `## Author
 
