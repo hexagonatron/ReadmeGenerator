@@ -97,11 +97,14 @@ inquirer.prompt(
 
         //Title
         if (ans.deployed) {
-            titleMarkdwn += `# [${ans.title}](${ans.deployed})`
+            titleMarkdwn += `# [${ans.title}](${encodeURIComponent(ans.deployed)})`
         } else {
             titleMarkdwn += `# ${ans.title}`
         }
-        titleMarkdwn += `\n![License](https://img.shields.io/badge/Licence-${ans.license}-blue)\n\n`
+
+        const licenseURL = `https://img.shields.io/badge/Licence-${encodeURIComponent(ans.license)}-blue`;
+
+        titleMarkdwn += `\n![License](${licenseURL})\n\n`
 
         //Desc
         if (ans.description) {
