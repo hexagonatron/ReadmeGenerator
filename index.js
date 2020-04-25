@@ -132,24 +132,17 @@ ${ans.usage}
         }
 
 
-        //License
-        tableOfContents += `* [License](#License)\n`
-        contentMarkdwn += `## License
-            
-This project is licenced under the ${ans.license} license.
-            
-`
-
+        
         //Contributing
         if (ans.contribute) {
             tableOfContents += `* [Contributing](#Contributing)\n`
             contentMarkdwn += `## Contributing
 
 ${ans.contribute}
-            
+
 `
         }
-
+        
         //Tests
         if (ans.tests) {
             tableOfContents += `* [Tests](#Tests)\n`
@@ -159,7 +152,14 @@ ${ans.tests}
 
 `
         }
-
+        
+        //License
+        tableOfContents += `* [License](#License)\n`
+        contentMarkdwn += `## License
+            
+This project is licenced under the ${ans.license} license.
+            
+`
         //Author
 
         //Queries Github for some info
@@ -178,9 +178,8 @@ ${ans.tests}
                 tableOfContents += `* [Author](#Author)\n`;
                 contentMarkdwn += `## Author
 
+![avatar](https://avatars2.githubusercontent.com/u/${json.id}?s=60&v=4)
 [${ans.github_user}](${json.html_url})
-
-![avatar](${json.avatar_url})
 
 ${json.email ? `Email: ${json.email}` : ""}
 `;
@@ -195,6 +194,6 @@ ${json.email ? `Email: ${json.email}` : ""}
 
         fs.writeFile("./output/README.md", finalMarkdwn, (err) => {
             if (err) console.log(err);
-            else console.log(`Thanks for using the readme generator.\nYour readme has been saved in ${chalk.green(__dirname + "\\output\\README.md")}`);
+            else console.log(`\n \nThanks for using the readme generator.\n\nYour readme has been saved in ${chalk.green(__dirname + "\\output\\README.md")}`);
         })
     })
