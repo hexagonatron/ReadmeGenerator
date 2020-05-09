@@ -64,7 +64,7 @@ inquirer.prompt(
     {
         type: "list",
         name: "license",
-        message: `Chose a ${chalk.green("license")}`,
+        message: `Chose a ${chalk.green("licence")}`,
         default: "MIT",
         choices: [
             {
@@ -97,7 +97,7 @@ inquirer.prompt(
 
         //Title
         if (ans.deployed) {
-            titleMarkdwn += `# [${ans.title}](${encodeURIComponent(ans.deployed)})`
+            titleMarkdwn += `# [${ans.title}](${ans.deployed})`
         } else {
             titleMarkdwn += `# ${ans.title}`
         }
@@ -157,10 +157,10 @@ ${ans.tests}
         }
         
         //License
-        tableOfContents += `* [License](#License)\n`
-        contentMarkdwn += `## License
+        tableOfContents += `* [Licence](#Licence)\n`
+        contentMarkdwn += `## Licence
             
-This project is licenced under the ${ans.license} license.
+This project is licenced under the ${ans.license} licence.
             
 `
         //Author
